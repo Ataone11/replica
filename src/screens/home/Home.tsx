@@ -17,7 +17,9 @@ const Home = () => {
   const handleClick = () => {
     setOpen(!open);
   };
-
+  {
+    /* Contentasdasd*/
+  }
   return (
     <div className="w-full flex flex-col items-center">
       <div className="bg-black w-full text-white flex justify-end items-center">
