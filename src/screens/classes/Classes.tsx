@@ -35,10 +35,10 @@ const Classes = () => {
             <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
               <div>
                 <Link to="/callanetics">
+                  <img src={callanetic} className="w-auto h-auto " alt="" />
                   <h1 className="object-none object-left text-3xl font-black text-white">
                     Cardio
                   </h1>
-                  <img src={callanetic} className="w-auto h-auto " alt="" />
                 </Link>
               </div>
               <div>

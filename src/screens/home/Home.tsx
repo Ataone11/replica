@@ -131,7 +131,7 @@ const Home = () => {
 
       <div className="w-full text-white bg-gris flex justify-start">
         <img src={classes} className="w-[80%]" alt="" />
-        <div className=" text-white text-4xl font-bold w-full p-28">
+        <div className=" text-white text-4xl font-bold w-full p-14">
           <h1>CLASSES</h1>
           <h2 className="object-none object-left pt-10 text-base font-black text-white">
             We host dozens of classes every day, from deadlifting and HIIT to
@@ -156,7 +156,7 @@ const Home = () => {
         </h2>
         <a
           href="/mas"
-          className="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block py-2 px-16"
+          className="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block pl-10 px-16"
         >
           Make it happen
         </a>
