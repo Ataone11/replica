@@ -24,16 +24,16 @@ const Home = () => {
     <div className="w-full flex flex-col items-center">
       <div className="bg-black w-full text-white flex justify-end items-center">
         <div className="w-[20%]"></div>
-        <img src={header} className="w-[80%]" alt="" />
-        <div className="flex flex-col justify-center items-start w-[60%] absolute top-32 left-12 ">
-          <div className=" text-white text-xl font-bold w-full p-24 md:text-8xl ">
+        <img src={header} className="w-[100%]" alt="" />
+        <div className="flex flex-col justify-center items-start w-[75%] absolute top-32 left-12 ">
+          <div className=" text-white text-xl font-bold w-full p-36 pl-56 md:text-7xl ">
             IT’S ALL ABOUT WHAT YOU CAN ACHIEVE
-            <div className=" text-white text-2xl font-bold w-full pt-5">
+            <div className=" text-white text-lg font-bold w-full pt-5">
               Empower yourself to make the changes you need to make
             </div>
             <a
               href="/mas"
-              className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block py-2 px-16"
+              className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-lg my-4 inline-block py-3 px-12"
             >
               LET´S GEY STARTED
             </a>
@@ -47,22 +47,22 @@ const Home = () => {
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
             <div className="font-serif font-extrabold text-black flex flex-row " />
-            <h1 className="object-none object-left pt-10 text-4xl font-black">
+            <h1 className="object-none object-left pt-10 text-5xl font-bold">
               POPULAR CLASSES
             </h1>
-            <div className="grid grid-cols-1  md:grid-cols-2 gap-4 pt-10">
+            <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-14 pt-16">
               <div>
                 <Link to="/Cardio">
                   <img src={Cardio} className="w-auto h-auto " alt="" />
-                  <h1 className="object-none object-left pt-10 text-3xl font-black">
+                  <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     Cardio
                   </h1>
                 </Link>
               </div>
               <div>
                 <Link to="/Airyoga">
-                  <img src={Airyoga} className="w-auto h-auto  pl-10 " alt="" />
-                  <h1 className="object-none object-left pt-10 text-3xl font-black pl-10">
+                  <img src={Airyoga} className="w-auto h-auto" alt="" />
+                  <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     AirYoga
                   </h1>
                 </Link>
@@ -71,7 +71,7 @@ const Home = () => {
               <div>
                 <Link to="/Lifting">
                   <img src={Lifting} className="w-auto h-auto pt-20  " alt="" />
-                  <h1 className="object-none object-left pt-10 text-3xl font-black">
+                  <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     Lifting
                   </h1>
                 </Link>
@@ -79,24 +79,20 @@ const Home = () => {
               </div>
               <div>
                 <Link to="/Back">
-                  <img
-                    src={Back}
-                    className="w-auto h-auto pt-20 pl-10  "
-                    alt=""
-                  />
-                  <h1 className="object-none object-left pt-10 text-3xl font-black pl-10">
+                  <img src={Back} className="w-auto h-auto pt-20" alt="" />
+                  <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     Press & Back
                   </h1>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center font-bold">
             <a
               href="/"
-              className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block py-2 px-16"
+              className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-xl my-4 inline-block py-3 px-8 font-bold"
             >
-              LET´S GEY STARTED
+              CHECK ALL CLASSES
             </a>
           </div>
           {/* /End replace */}
@@ -106,7 +102,7 @@ const Home = () => {
         {/*   <div className="  max-w-8xl mx-auto  sm:px-6 lg:px-18 bg-About">*/}
         <div className="w-[20%]"></div>
         <img src={About} className="w-[80%]" alt="" />
-        <div className="flex flex-col justify-center items-start w-[60%] absolute inset-y-0 left-0 p-24">
+        <div className="flex flex-col justify-center items-center w-[60%] absolute inset-y-0 left-0 p-24">
           <div className="text-white text-4xl font-bold container w-[50%] h-[50%]">
             <h1>ABOUT BRONX</h1>
             <h2 className="object-none object-left pt-10 text-base font-black text-white">
@@ -118,6 +114,7 @@ const Home = () => {
               on your fitness journey, come in and speak to one of our qualified
               trainers who can help you develop a plan.
             </h2>
+            <div className="w-[20%]"></div>
             <a
               href="/mas"
               className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-lg my-4 inline-block py-2 px-16"
@@ -129,8 +126,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full text-white bg-gris flex justify-start">
-        <img src={classes} className="w-[80%]" alt="" />
+      <div className="w-full text-white bg-gris flex justify-center">
+        <img src={classes} className="w-[100%]" alt="" />
         <div className=" text-white text-4xl font-bold w-full p-14">
           <h1>CLASSES</h1>
           <h2 className="object-none object-left pt-10 text-base font-black text-white">
@@ -142,6 +139,7 @@ const Home = () => {
             Check out our individual class pages to see what’s on when, and stop
             on by for a chat if you want to see how we do things.
           </h2>
+          <div className="w-[20%]"></div>
           <a
             href="/mas"
             className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-lg my-4 inline-block py-2 px-16"

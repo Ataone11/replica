@@ -24,8 +24,8 @@ const Trainer = () => {
 
   return (
     <div className="w-full flex flex-col items-center bg-black ">
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      <div className="w-full">
+        <div className="mx-auto py-6">
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
             <div className="font-serif font-extrabold text-white flex flex-row p-12 " />
@@ -134,7 +134,7 @@ const Trainer = () => {
           <div className="flex justify-center"></div>
           {/* /End replace */}
         </div>
-      </main>
+      </div>
 
       <div className="bg-white h-full w-full items-center justify-between">
         <h2 className="font-serif font-extrabold text-black text-4xl p-20">
