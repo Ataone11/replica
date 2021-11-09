@@ -5,8 +5,8 @@ function Footer() {
   return (
     <div>
       <div className="bg-black w-full">
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-4 p-20">
-          <div>
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-4 p-36">
+          <div className="pl-24">
             <h1 className="font-serif font-extrabold text-white text-2xl">
               Working Hours
             </h1>
@@ -27,7 +27,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h1 className="font-serif font-extrabold text-white text-lgxl">
+            <h1 className="font-serif font-extrabold text-white text-2xl">
               Address
             </h1>
             <h2 className="font-serif font-extrabold text-white text-lgxl pt-5">

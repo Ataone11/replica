@@ -1,14 +1,8 @@
-import ReactDOM from "react-dom";
 import React, { useEffect, useState } from "react";
-import header from "../../assets/home/background_header.png";
-import Logo from "../recursos/prueba daniel/home/logo.png";
-import Cardio from "../recursos/prueba daniel/classes/cardio/cardio.png";
-import Airyoga from "../recursos/prueba daniel/classes/yoga/yoga.png";
-import Lifting from "../recursos/prueba daniel/classes/ligting/ligting.png";
-import Back from "../recursos/prueba daniel/classes/press_back/press_back.png";
-import About from "../../assets/home/background_about.png";
-import classes from "../../assets/home/background_classes.png";
-import ligting from "../../assets/classes/ligting/ligting.png";
+import Cardio from "../../assets/classes/cardio/cardio.png";
+import Airyoga from "../../assets/classes/yoga/yoga.png";
+import Lifting from "../../assets/classes/ligting/ligting.png";
+import Back from "../../assets/classes/press_back/press_back.png";
 import callanetic from "../../assets/classes/callanetics/callanetics.png";
 import b_b from "../../assets/classes/body_building/body_building.jpeg";
 import C_boxing from "../../assets/classes/cardio_boxing/cardio_boxing.png";
@@ -34,7 +28,7 @@ const Classes = () => {
             </h1>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
               <div>
-                <Link to="/callanetics">
+                <Link to="/Trainer">
                   <img src={callanetic} className="w-auto h-auto " alt="" />
                   <h1 className="object-none object-left text-3xl font-black text-white">
                     Cardio
@@ -42,7 +36,7 @@ const Classes = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/Airyoga">
+                <Link to="/Trainer">
                   <img src={Airyoga} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     AirYoga
@@ -51,7 +45,7 @@ const Classes = () => {
               </div>
 
               <div>
-                <Link to="/Lifting">
+                <Link to="/Trainer">
                   <img src={Lifting} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     Lifting
@@ -61,7 +55,7 @@ const Classes = () => {
               </div>
 
               <div>
-                <Link to="/sport_dances">
+                <Link to="/Trainer">
                   <img src={s_dances} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     Lifting
@@ -70,7 +64,7 @@ const Classes = () => {
                 <a href="Lifting"></a>
               </div>
               <div>
-                <Link to="/cardio_boxing">
+                <Link to="/Trainer">
                   <img src={C_boxing} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     Press & Back
@@ -78,7 +72,7 @@ const Classes = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/cardio">
+                <Link to="/Trainer">
                   <img src={Cardio} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     Press & Back
@@ -86,7 +80,7 @@ const Classes = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/press_back">
+                <Link to="/Trainer">
                   <img src={Back} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left pt-10 text-3xl font-black">
                     Press & Back
@@ -94,7 +88,7 @@ const Classes = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/body_building">
+                <Link to="/Trainer">
                   <img src={b_b} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left text-3xl font-black">
                     Press & Back

@@ -1,14 +1,11 @@
-import ReactDOM from "react-dom";
 import React, { useEffect, useState } from "react";
 import header from "../../assets/home/background_header.png";
-import Logo from "../recursos/prueba daniel/home/logo.png";
-import Cardio from "../recursos/prueba daniel/classes/cardio/cardio.png";
-import Airyoga from "../recursos/prueba daniel/classes/yoga/yoga.png";
-import Lifting from "../recursos/prueba daniel/classes/ligting/ligting.png";
-import Back from "../recursos/prueba daniel/classes/press_back/press_back.png";
+import Cardio from "../../assets/classes/cardio/cardio.png";
+import Airyoga from "../../assets/classes/yoga/yoga1.jpg";
+import Lifting from "../../assets/classes/ligting/ligting.png";
+import Back from "../../assets/classes/press_back/press_back.png";
 import About from "../../assets/home/background_about.png";
 import classes from "../../assets/home/background_classes.png";
-import Ab from "../../bg_about.png";
 
 import { Link } from "react-router-dom";
 
@@ -47,7 +44,7 @@ const Home = () => {
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
             <div className="font-serif font-extrabold text-black flex flex-row " />
-            <h1 className="object-none object-left pt-10 text-5xl font-bold">
+            <h1 className="object-none object-left pt-10 text-5xl font-bold my-9">
               POPULAR CLASSES
             </h1>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-14 pt-16">
@@ -60,7 +57,7 @@ const Home = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/Airyoga">
+                <Link to="/Classes">
                   <img src={Airyoga} className="w-auto h-auto" alt="" />
                   <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     AirYoga
@@ -69,7 +66,7 @@ const Home = () => {
               </div>
 
               <div>
-                <Link to="/Lifting">
+                <Link to="/Classes">
                   <img src={Lifting} className="w-auto h-auto pt-20  " alt="" />
                   <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     Lifting
@@ -78,7 +75,7 @@ const Home = () => {
                 <a href="Lifting"></a>
               </div>
               <div>
-                <Link to="/Back">
+                <Link to="/Classes">
                   <img src={Back} className="w-auto h-auto pt-20" alt="" />
                   <h1 className="object-none object-left pt-4 text-3xl font-bold">
                     Press & Back
@@ -90,7 +87,7 @@ const Home = () => {
           <div className="flex justify-center font-bold">
             <a
               href="/"
-              className=" bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-xl my-4 inline-block py-3 px-8 font-bold"
+              className=" bg-red-600  hover:bg-opacity-80 text-white transition duration-200 group text-lg my-4 inline-block py-3 px-8 font-bold"
             >
               CHECK ALL CLASSES
             </a>
@@ -126,9 +123,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full text-white bg-gris flex justify-center">
-        <img src={classes} className="w-[100%]" alt="" />
-        <div className=" text-white text-4xl font-bold w-full p-14">
+      <div className="w-full text-white bg-gris flex justify-between">
+        <img src={classes} className="w-[80%] h-80 object-contain" alt="" />
+        <div className=" text-white text-4xl font-bold mr-[20%] w-[25%] h-[20%] p-14">
           <h1>CLASSES</h1>
           <h2 className="object-none object-left pt-10 text-base font-black text-white">
             We host dozens of classes every day, from deadlifting and HIIT to
@@ -148,16 +145,17 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <div className="bg-white h-[30%] w-[40%] relative">
-        <h2 className="font-serif font-extrabold text-black text-4xl p-16">
+      <div className="bg-white h-[45%] w-[60%]">
+        <h2 className="font-bold text-black text-4xl pt-24">
           ARE YOU READY FOR CHANGES?
         </h2>
         <a
           href="/mas"
-          className="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block pl-10 px-16"
+          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl my-8 inline-block py-4 px-7"
         >
           Make it happen
         </a>
+        <div className="pt-12"></div>
       </div>
     </div>
   );

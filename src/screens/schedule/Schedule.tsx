@@ -1,14 +1,5 @@
 import ReactDOM from "react-dom";
 import React, { useEffect, useState } from "react";
-import header from "../../assets/home/background_header.png";
-import Logo from "../recursos/prueba daniel/home/logo.png";
-import Cardio from "../recursos/prueba daniel/classes/cardio/cardio.png";
-import Airyoga from "../recursos/prueba daniel/classes/yoga/yoga.png";
-import Lifting from "../recursos/prueba daniel/classes/ligting/ligting.png";
-import Back from "../recursos/prueba daniel/classes/press_back/press_back.png";
-import About from "../../assets/home/background_about.png";
-import classes from "../../assets/home/background_classes.png";
-import Ab from "../../bg_about.png";
 
 import { Link } from "react-router-dom";
 

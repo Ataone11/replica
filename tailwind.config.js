@@ -11,12 +11,6 @@ module.exports = {
         primary: PRIMARY_COLOR,
         gris: GRIS,
       },
-
-      backgroundImage: (theme) => ({
-        Foto: "url('background_header.png')",
-        About: "url('background_about.png')",
-        classes: "url('background_classes.png')",
-      }),
     },
   },
   variants: {

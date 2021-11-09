@@ -1,14 +1,5 @@
-import ReactDOM from "react-dom";
 import React, { useEffect, useState } from "react";
-import header from "../../assets/home/background_header.png";
-import Logo from "../recursos/prueba daniel/home/logo.png";
-import Cardio from "../recursos/prueba daniel/classes/cardio/cardio.png";
-import Airyoga from "../recursos/prueba daniel/classes/yoga/yoga.png";
-import Lifting from "../recursos/prueba daniel/classes/ligting/ligting.png";
-import Back from "../recursos/prueba daniel/classes/press_back/press_back.png";
-import About from "../../assets/home/background_about.png";
-import classes from "../../assets/home/background_classes.png";
-import ligting from "../../assets/classes/ligting/ligting.png";
+
 import Trainer1 from "../../assets/personal_workouts/mathew.png";
 import Trainer2 from "../../assets/personal_workouts/john.png";
 import Trainer3 from "../../assets/personal_workouts/inna.png";
@@ -28,12 +19,12 @@ const Trainer = () => {
         <div className="mx-auto py-6">
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
-            <div className="font-serif font-extrabold text-white flex flex-row p-12 " />
-            <h1 className="object-none object-left pt-40 text-4xl font-black text-white">
+            <div className="font-serif font-extrabold text-white flex flex-row p-20 " />
+            <h1 className="object-none object-left pt-40 text-5xl font-bold text-white pl-36">
               PERSONAL TRAINERS
             </h1>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
-              <div>
+              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
                 <Link to="/callanetics">
                   <h1 className="object-none object-left pt-10 text-4xl font-black text-white">
                     Mathew Heeron
@@ -76,7 +67,7 @@ const Trainer = () => {
                 <a href="Lifting"></a>
               </div>
 
-              <div>
+              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
                 <Link to="/callanetics">
                   <h1 className="object-none object-left pt-10 text-4xl font-black text-white">
                     John Heeron
@@ -101,9 +92,9 @@ const Trainer = () => {
                 </Link>
                 <a href="Lifting"></a>
               </div>
-              <div>
+              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
                 <Link to="/callanetics">
-                  <h1 className="object-none object-left pt-10 text-4xl font-black text-white">
+                  <h1 className="object-none object-left pt-20 text-4xl font-black text-white">
                     Inna Gebrow
                     <h2 className="object-none object-left pt-10 text-base font-black text-white">
                       Are you looking to improve your and joint strength? Then
@@ -136,16 +127,17 @@ const Trainer = () => {
         </div>
       </div>
 
-      <div className="bg-white h-full w-full items-center justify-between">
-        <h2 className="font-serif font-extrabold text-black text-4xl p-20">
+      <div className="bg-white h-[45%] w-full">
+        <h2 className="font-bold text-black text-4xl pt-24 pl-24">
           ARE YOU READY FOR CHANGES?
         </h2>
         <a
           href="/mas"
-          className="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block py-2 px-16"
+          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-12 my-8 inline-block py-4 px-7"
         >
           Make it happen
         </a>
+        <div className="pt-12"></div>
       </div>
     </div>
   );
