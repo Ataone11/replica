@@ -5,6 +5,7 @@ import Footer from "./screens/general/Footer";
 import Classes from "./screens/classes/Classes";
 import Trainer from "./screens/trainer/Trainer";
 import Schedule from "./screens/schedule/Schedule";
+import Singup from "./screens/singup/Singup";
 
 const App = () => {
   return (
@@ -21,7 +22,9 @@ const App = () => {
         <Route exact path="/Schedule">
           <Schedule />
         </Route>
-        <Route exact path="/Singup"></Route>
+        <Route exact path="/Singup">
+          <Singup />
+        </Route>
         <Route exact path="/Trainer">
           <Trainer />
         </Route>
