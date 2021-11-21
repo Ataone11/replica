@@ -1,17 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useHistory, useParams, Link } from "react-router-dom";
+import { Usuario } from "../../Usuario";
+import * as videoService from "../../controlladores/videoService";
+import { connect } from "react-redux";
 
 import Trainer1 from "../../assets/personal_workouts/mathew.png";
 import Trainer2 from "../../assets/personal_workouts/john.png";
 import Trainer3 from "../../assets/personal_workouts/inna.png";
 import s_dances from "../../assets/classes/sport_dances/sport_dances.png";
 
-import { Link } from "react-router-dom";
+type InputChange = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
+interface Params {
+  id?: string;
+}
 const Singup = () => {
-  const [open, setOpen] = useState(false);
-  const handleClick = () => {
-    setOpen(!open);
+  const initialState = {
+    name: "",
+    last_name: "",
+    address: "",
+    mensage: "",
   };
+  const [usuario, setVideo] = useState<Usuario>(initialState);
+  const history = useHistory();
+  const params = useParams<Params>();
+
+  const getVideo = async (id: string) => {
+    const res = await videoService.getVideoById(id);
+    const { name, last_name, address, mensage } = res.data;
+    setVideo({ name, last_name, address, mensage });
+  };
+
+  useEffect(() => {
+    if (params.id) getVideo(params.id);
+  }, [params.id]);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!params.id) {
+      await videoService.createNewVideo(usuario);
+      setVideo(initialState);
+    } else {
+    }
+    history.push("/usuarios");
+  };
+
+  const handleInputChange = (e: InputChange) =>
+    setVideo({ ...usuario, [e.target.name]: e.target.value });
 
   return (
     <div className="w-full flex flex-col items-center bg-black ">
@@ -25,21 +60,25 @@ const Singup = () => {
             </h1>
             <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
               <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
-                <form className="w-full max-w-lg">
+                <form className="w-full max-w-lg" onSubmit={handleSubmit}>
                   <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full md:w-1/2 px-3 p-3 mb-6 md:mb-0">
                       <input
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500  py-3 px-7 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        name="name"
                         id="grid-first-name"
                         type="text"
+                        onChange={handleInputChange}
                         placeholder="your name"
                       />
                     </div>
                     <div className="w-full md:w-1/2 px-3">
                       <input
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 py-3 px-12 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        name="last_name"
                         id="grid-last-name"
                         type="text"
+                        onChange={handleInputChange}
                         placeholder="Your last name"
                       />
                     </div>
@@ -48,6 +87,8 @@ const Singup = () => {
                     <div className="w-full px-3">
                       <input
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-3 px-24 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        name="address"
+                        onChange={handleInputChange}
                         placeholder="Your address name"
                       />
                     </div>
@@ -56,10 +97,21 @@ const Singup = () => {
                     <div className="w-full px-3">
                       <input
                         className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-12 px-24 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        name="mensage"
+                        onChange={handleInputChange}
                         placeholder="Enter your menssage"
                       />
                     </div>
                   </div>
+                  {params.id ? (
+                    <button className="item border-4 border-blue-400 text-black font-bold p-2 rounded-full hover:bg-pink-300 hover:text-black transition duration-500">
+                      Update
+                    </button>
+                  ) : (
+                    <button className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-12 my-8 inline-block py-4 px-7">
+                      Submit
+                    </button>
+                  )}
                 </form>
               </div>
               <div>
