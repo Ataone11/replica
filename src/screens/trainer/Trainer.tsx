@@ -19,12 +19,12 @@ const Trainer = () => {
         <div className="mx-auto py-6">
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
-            <div className="font-serif font-extrabold text-white flex flex-row p-20 " />
-            <h1 className="object-none object-left pt-40 text-5xl font-bold text-white pl-36">
+            <div className="font-serif font-extrabold text-white flex flex-row md:p-20 " />
+            <h1 className="object-none object-left pt-10 md:pt-40 text-4xl md:text-5xl font-bold text-white md:pl-36">
               PERSONAL TRAINERS
             </h1>
-            <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
-              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
+            <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-20 md:pt-40">
+              <div className="justify-around font-bold container w-full md:w-[60%] h-[50%] md:pl-36">
                 <Link to="/callanetics">
                   <h1 className="object-none object-left pt-10 text-4xl font-black text-white">
                     Mathew Heeron
@@ -51,23 +51,17 @@ const Trainer = () => {
               <div>
                 <Link to="/Airyoga">
                   <img src={Trainer1} className="w-auto h-auto" alt="" />
-                  <h1 className="object-none object-left text-3xl font-black">
-                    AirYoga
-                  </h1>
                 </Link>
               </div>
 
               <div>
                 <Link to="/Lifting">
-                  <img src={Trainer2} className="w-auto h-auto" alt="" />
-                  <h1 className="object-none object-left text-3xl font-black">
-                    Lifting
-                  </h1>
+                  <img src={Trainer2} className="hidden md:block w-auto h-auto" alt="" />
                 </Link>
                 <a href="Lifting"></a>
               </div>
 
-              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
+              <div className="justify-around font-bold container w-full md:w-[60%] h-[50%] md:pl-36">
                 <Link to="/callanetics">
                   <h1 className="object-none object-left pt-10 text-4xl font-black text-white">
                     John Heeron
@@ -92,7 +86,13 @@ const Trainer = () => {
                 </Link>
                 <a href="Lifting"></a>
               </div>
-              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
+              <div className="md:hidden">
+                <Link to="/Lifting">
+                  <img src={Trainer2} className="md:hidden w-auto h-auto" alt="" />
+                </Link>
+                <a href="Lifting"></a>
+              </div>
+              <div className="justify-around font-bold container w-full md:w-[60%] h-[50%] md:pl-36">
                 <Link to="/callanetics">
                   <h1 className="object-none object-left pt-20 text-4xl font-black text-white">
                     Inna Gebrow
@@ -127,17 +127,17 @@ const Trainer = () => {
         </div>
       </div>
 
-      <div className="bg-white h-[45%] w-full">
-        <h2 className="font-bold text-black text-4xl pt-24 pl-24">
+      <div className="bg-white  h-[10%] md:h-[45%] w-full">
+        <h2 className="font-bold text-black text-3xl pt-5 md:text-4xl md:pt-24 pl-10 md:pl-24">
           ARE YOU READY FOR CHANGES?
         </h2>
         <a
           href="/mas"
-          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-12 my-8 inline-block py-4 px-7"
+          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-lg md:text-xl mx-8 md:mx-12 my-8 inline-block py-4 px-7"
         >
-          Make it happen
+          MAKE IT HAPPEN
         </a>
-        <div className="pt-12"></div>
+        <div className="md:pt-12"></div>
       </div>
     </div>
   );

@@ -110,15 +110,16 @@ const Classes = () => {
       </main>
 
       <div className="bg-white h-full w-full items-center justify-between">
-        <h2 className="font-serif font-extrabold text-black text-4xl p-16">
+      <h2 className="font-bold text-black text-4xl pt-24 pl-5">
           ARE YOU READY FOR CHANGES?
         </h2>
         <a
           href="/mas"
-          className="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white transition duration-200 group text-2xl my-4 inline-block py-2 px-16"
+          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl my-8 inline-block py-4 px-7 pl-5"
         >
           Make it happen
         </a>
+        <div className="pt-12"></div>
       </div>
     </div>
   );
