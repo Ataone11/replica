@@ -7,7 +7,6 @@ import Schedule from "./screens/schedule/Schedule";
 import Singup from "./screens/singup/Singup";
 import Header2 from "./screens/general/header/Header2";
 import Plans from "./screens/plans/Plans";
-import pLAN from "./screens/plans/Plan";
 import Plan from "./screens/plans/Plan";
 
 const App = () => {

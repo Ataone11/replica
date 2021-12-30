@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getPlans } from "../../actions/plansActions";
-import basic from "../../assets/Plans/basic.png";
 
 const Plan = () => {
   const { _id } = useParams();
