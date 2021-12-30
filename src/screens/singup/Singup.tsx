@@ -1,13 +1,8 @@
 import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
-import { Usuario } from "../../Usuario";
-import * as videoService from "../../controlladores/videoService";
+import { Usuario } from "../../models/Usuario";
+import * as videoService from "../../controlladores/userService";
 import { connect } from "react-redux";
-
-import Trainer1 from "../../assets/personal_workouts/mathew.png";
-import Trainer2 from "../../assets/personal_workouts/john.png";
-import Trainer3 from "../../assets/personal_workouts/inna.png";
-import s_dances from "../../assets/classes/sport_dances/sport_dances.png";
 
 type InputChange = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
@@ -49,22 +44,29 @@ const Singup = () => {
     setVideo({ ...usuario, [e.target.name]: e.target.value });
 
   return (
-    <div className="w-full flex flex-col items-center bg-black ">
+    <div className="w-full  items-center bg-black justify-between">
       <div className="w-full">
-        <div className="mx-auto py-6">
+        <div className="md:mx-auto py-6">
           {/* Content*/}
           <div className="px-4 py-6 sm:px-0 flex flex-col ">
-            <div className="font-serif font-extrabold text-white flex flex-row p-20" />
-            <h1 className="object-none object-left pt-40 text-5xl font-bold text-white pl-36">
+            <div className="font-serif font-extrabold text-white" />
+            <h1 className="object-none object-left font-bold pt-9 pl-5 text-3xl md:pt-40 md:text-5xl text-white md:pl-56">
               SIGN UP FOR A WORKOUT WITH A PERSONAL COACH
             </h1>
-            <div className="grid grid-cols-1  md:grid-cols-2 gap-x-52 gap-y-16 pt-40">
-              <div className="justify-around font-bold container w-[60%] h-[50%] pl-36">
-                <form className="w-full max-w-lg" onSubmit={handleSubmit}>
-                  <div className="flex flex-wrap -mx-3 mb-6">
-                    <div className="w-full md:w-1/2 px-3 p-3 mb-6 md:mb-0">
+            <h1 className="md:hidden object-none object-left text-md font-bold text-white pl-6 pt-10">
+              We will contact you through your email about your upcoming
+              workout!
+            </h1>
+            <div className="grid grid-cols-1  md:grid-cols-2 gap-x-10 gap-y-16 pt-10 md:pt-40">
+              <div className="justify-between font-bold container w-[80%] h-[50%] pl-5">
+                <form
+                  className="w-full max-w-2xl  md:pl-56"
+                  onSubmit={handleSubmit}
+                >
+                  <div className="grid-flow-row -mx-3 mb-6">
+                    <div className="w-full  px-3 p-3 mb-0 md:mb-0">
                       <input
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500  py-3 px-7 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500  py-3 px-3 mb-3 leading-tight focus:outline-none focus:bg-white"
                         name="name"
                         id="grid-first-name"
                         type="text"
@@ -72,9 +74,9 @@ const Singup = () => {
                         placeholder="your name"
                       />
                     </div>
-                    <div className="w-full md:w-1/2 px-3">
+                    <div className="w-full px-3">
                       <input
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 py-3 px-12 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 py-3 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         name="last_name"
                         id="grid-last-name"
                         type="text"
@@ -86,7 +88,7 @@ const Singup = () => {
                   <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
                       <input
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-3 px-24 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-3 px-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         name="address"
                         onChange={handleInputChange}
                         placeholder="Your address name"
@@ -96,7 +98,7 @@ const Singup = () => {
                   <div className="flex flex-wrap -mx-3 mb-6">
                     <div className="w-full px-3">
                       <input
-                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-12 px-24 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200  py-12 px-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 justify-start items-start"
                         name="mensage"
                         onChange={handleInputChange}
                         placeholder="Enter your menssage"
@@ -108,14 +110,14 @@ const Singup = () => {
                       Update
                     </button>
                   ) : (
-                    <button className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-12 my-8 inline-block py-4 px-7">
-                      Submit
+                    <button className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-0 my-0 inline-block py-4 px-10">
+                      SUBMIT
                     </button>
                   )}
                 </form>
               </div>
               <div>
-                <h1 className="object-none object-left text-3xl font-black">
+                <h1 className="hidden md:block object-none object-left text-xl font-bold text-white">
                   We will contact you through your email about your upcoming
                   workout!
                 </h1>
@@ -131,9 +133,10 @@ const Singup = () => {
         <h2 className="font-bold text-black text-4xl pt-24 pl-24">
           ARE YOU READY FOR CHANGES?
         </h2>
+        c{" "}
         <a
           href="/mas"
-          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-12 my-8 inline-block py-4 px-7"
+          className="bg-primary  hover:bg-opacity-100 text-white transition duration-200 group text-xl mx-20 mx my-8 inline-block py-4 px-7"
         >
           Make it happen
         </a>

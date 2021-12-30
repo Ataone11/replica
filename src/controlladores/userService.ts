@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Usuario } from "../Usuario";
+import { Usuario } from "../models/Usuario";
 
 
 const API = "http://localhost:4000"
